@@ -5,6 +5,7 @@ a {
   }
 
 
+
 /* importar depois um arquivo contendo todas 
 as variaveis de css do sistema */
 
@@ -65,9 +66,13 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 #alfabeto a{
     color: #fff;
-    font-size: 26px;
-
+    font-size: 32px;
+    padding-right: 10px;
     width: 40px;
     height: 40px;
     
 }
+#alfabeto a:hover {
+    color: #F72585;
+    filter: drop-shadow(3px 3px 10px #4361EE) drop-shadow(3px 3px 10px #480CA8);
+  }
