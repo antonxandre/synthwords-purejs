@@ -7,24 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biography</title>
-    <script src="./components/nav.js" async></script>
+
+    </script>
     <link rel="stylesheet" href="./style.css">
     </link>
 </head>
 
 
 <body>
-    <div class="navbg">
+
+    <!-- navegacaio -->
+    <!-- <div class="navbg">
         <div id="nav"></div>
-    </div>
+    </div> -->
 
     <br>
     <br>
+
+    <script>
+
+        // let palavraDigitada = document.getElementById('palavra-digitada').inne;
+
+
+
+        document.addEventListener('keydown', (event) => {
+            var name = event.key;
+            var code = event.code;
+            // Alert the key name and key code on keydown
+            // palavraDigitada.innerText += event.key;
+
+            document.getElementById('palavra-digitada').innerHTML += event.key;
+
+        }, false);
+    </script>
+
     <div class="glass content-container">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis corporis, quia totam deleniti necessitatibus ea
-        earum nostrum eum excepturi perspiciatis eligendi qui facilis rerum asperiores amet maiores blanditiis obcaecati
-        ipsam!  
+        <center>
+            <div id="alfabeto"></div>
+        </center>
     </div>
+    <div id="palavra-digitada"></div>
+
+
 </body>
+<script src="./views/alfabeto.js" async></script>
 
 </html>
