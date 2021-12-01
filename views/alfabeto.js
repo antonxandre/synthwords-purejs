@@ -26,9 +26,10 @@ let adicionarLetra = function (letra) {
             let index = alfabeto.indexOf(letra);
             if (index > -1) {
                 alfabetoNovo = (alfabetoNovo + alfabeto.splice(index, 1));
-                //let novoAlfabeto = alfabeto.map(e => `<a class="shadowLetter" onclick="adicionarLetra('${e}')" href="#letra=${e}"> ${e} </a>`).join('');
-
-                //elem.innerHTML = novoAlfabeto;
+                console.log(alfabeto.length)
+                let newhtmlList = alfabeto.map(e => `<a class="shadowLetter" onclick="adicionarLetra('${e}')" href="#letra=${e}"> ${e} </a>`).join('');
+                document.querySelector('#alfabeto').innerHTML = newhtmlList;
+             
             }
         }
     })();
