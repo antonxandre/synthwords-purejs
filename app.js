@@ -1,7 +1,16 @@
 const palavras = [
     "ALGORITMO",
     "CONSOLE",
+    "JAVA",
+    "VIM",
+    "CYBER",
+    "ALAN TURING",
+    "ADA LOVELACE",
+    "ARRAY",
+    "VETOR",
+    "OBJETO"
 ];
+
 const QUANTIDADE_VIDAS = 5;
 let palavraOriginal = '';
 let palavraEmJogo = ''
@@ -29,12 +38,11 @@ let renderPalavraSecreta = function () {
     palavra = palavra.replace(/[a-z]/gi, '_');
     palavraEmJogo = palavra;
     palavraDigitada.innerHTML = palavra;
-
     return palavra;
 }
 
 function run() {
-    
+
     vidasElement.innerHTML = `Vidas: ${vidas}`;
     vitoriasElement.innerHTML = `Vitórias: ${vitorias}`;
     renderPalavraSecreta();
@@ -42,14 +50,14 @@ function run() {
     alfabetoNovo = [];
     //escuta teclas do teclado
     let alfabetHtmlList = alfabeto.map(e => `<a class="shadowLetter" onclick="adicionarLetra('${e}')" href="#letra=${e}"> ${e} </a>`).join('');
-     document.querySelector('#alfabeto').innerHTML = alfabetHtmlList;
+    document.querySelector('#alfabeto').innerHTML = alfabetHtmlList;
     document.addEventListener('keydown', (event) => {
-        
-            var key = event.key;
-            if (alfabeto.indexOf(key.toUpperCase()) > -1) {
-                adicionarLetra(key.toUpperCase());
-            }
-        
+
+        var key = event.key;
+        if (alfabeto.indexOf(key.toUpperCase()) > -1) {
+            adicionarLetra(key.toUpperCase());
+        }
+
     }, false);
 };
 
@@ -65,14 +73,14 @@ let adicionarLetra = (letra) => {
             novaPalavraComAcertos += char;
         });
         palavraEmJogo = novaPalavraComAcertos;
-        
+
         verificarSeVenceu();
         palavraDigitada.innerHTML = palavraEmJogo;
     }
     else {
         perdeuUmaChance();
     }
-   
+
 }
 
 
@@ -87,6 +95,7 @@ let verificarSeVenceu = () => {
         run();
     }
 }
+
 let perdeuUmaChance = () => {
     vidas--;
     vidasElement.innerHTML = `Vidas: ${vidas}`;
@@ -108,4 +117,4 @@ let removerLetraAlfabeto = (letra) => {
     }
 };
 
-run();
+run(); z
